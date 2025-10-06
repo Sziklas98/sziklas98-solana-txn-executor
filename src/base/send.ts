@@ -35,10 +35,15 @@ export async function resendTransactionWithInterval({
     try {
       await connection.sendTransaction(transaction, sendOptions)
     } catch (error) {
-      throw new SendTransactionError('ResendTransactionError')
+      throw new SendTransactionError({
+        action: 'send',
+        signature: 'unknown',
+        transactionMessage: 'ResendTransactionError',
+        logs: [],
+      })
     }
   }
-}
+} // ✅ fixed: properly closed while and function braces
 
 /**
  * Send transaction with resend functionality
