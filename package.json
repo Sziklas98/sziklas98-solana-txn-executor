@@ -1,5 +1,5 @@
 {
-  "name": "solana-transactions-executor",
+  "name": "sziklas98-solana-transactions-executor",
   "version": "6.0.3",
   "description": "A small solution to operate solana transactions: create, sign, send, chunk, support ledger etc.",
   "module": "dist/esm/index.js",
